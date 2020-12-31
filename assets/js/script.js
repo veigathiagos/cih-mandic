@@ -1,11 +1,10 @@
 function entrar(){
    let resp = document.getElementById('resp')
 
-   if (resp.value == '2012'){
-      window.location.href = "carta.html";
-      localStorage.setItem('senha', resp)
+   if (resp.value == 'rainha' || resp.value == 'Rainha' || resp.value == 'RAINHA'){
+      $("#acertou").modal('toggle');
    } else {
-      alert('Resposta incorreta, tente novamente')
+      $("#errou").modal('toggle');
    }
 }
 
